@@ -9,7 +9,9 @@ import 'Routes/welcome.dart';
 void main(List<String> args) {
   runApp(MaterialApp(
     title: "Apollo",
-    theme: ThemeData(),
+    theme: ThemeData(
+      canvasColor: Colors.transparent,
+    ),
     home: Router(),
   ));
 }
