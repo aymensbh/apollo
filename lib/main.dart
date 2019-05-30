@@ -28,18 +28,15 @@ class _RouterState extends State<Router> {
       stream: firebaseAuth.onAuthStateChanged,
       builder: (context, snapshot) {
         return AnimatedSwitcher(
-      duration: const Duration(seconds: 2),
-      child: snapshot.hasData
-        ? initUser(snapshot.data)
-        : WelcomePage()
-    );
+            duration: const Duration(seconds: 1),
+            child: snapshot.hasData ? initUser(snapshot.data) : WelcomePage());
       },
     );
   }
 
-  Widget initUser(FirebaseUser fbuser){
-    firebaseUser= fbuser;
-    user= Firestore.instance.collection("user").document(firebaseUser.uid);
+  Widget initUser(FirebaseUser fbuser) {
+    firebaseUser = fbuser;
+    user = Firestore.instance.collection("user").document(firebaseUser.uid);
     return HomePage();
   }
 }

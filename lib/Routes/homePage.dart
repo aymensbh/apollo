@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,7 +13,15 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hi"),
-      )
+      ),
+      body: Center(
+        child: FlatButton(
+          child: Text("sign out"),
+          onPressed: ()async{
+            await FirebaseAuth.instance.signOut();
+          },
+        ),
+      ),
     );
   }
 }
