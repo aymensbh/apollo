@@ -59,7 +59,7 @@ void showSignupSheet(BuildContext context) {
                             child: Text(
                           "Facebook Signup",
                           style: TextStyle(
-                              color: Colors.blueAccent, fontFamily: "Baloo"),
+                              color: Colors.blueAccent,),
                         ))
                       ],
                     )),
@@ -86,7 +86,7 @@ void showSignupSheet(BuildContext context) {
                           child: Text(
                         "Google Signup",
                         style: TextStyle(
-                            color: Colors.deepOrange, fontFamily: "Baloo"),
+                            color: Colors.deepOrange,),
                       ))
                     ],
                   )),
@@ -118,7 +118,7 @@ void showSignupSheet(BuildContext context) {
                                         if (input.isEmpty)
                                           return 'Provide a name';
                                       },
-                                      cursorColor: Colors.indigoAccent,
+                                      cursorColor: Color(0xFF8f7fa0),
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         fillColor:
@@ -168,7 +168,7 @@ void showSignupSheet(BuildContext context) {
                                         if (input.isEmpty)
                                           return 'Provide an email';
                                       },
-                                      cursorColor: Colors.indigoAccent,
+                                      cursorColor: Color(0xFF8f7fa0),
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         fillColor:
@@ -218,7 +218,7 @@ void showSignupSheet(BuildContext context) {
                                         if (input.length < 6)
                                           return 'Provide 6 characters';
                                       },
-                                      cursorColor: Colors.indigoAccent,
+                                      cursorColor: Color(0xFF8f7fa0),
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         fillColor:
@@ -263,7 +263,7 @@ void showSignupSheet(BuildContext context) {
                             ),
                             RaisedButton(
                               textColor: Colors.white,
-                              color: Colors.indigoAccent,
+                              color: Color(0xFF8f7fa0),
                               child: Text("Get Started",
                                   style: TextStyle(fontFamily: "Baloo")),
                               onPressed: () {
@@ -297,7 +297,7 @@ void showSignupSheet(BuildContext context) {
                             child: Text(
                           "Email & Password",
                           style: TextStyle(
-                              color: Colors.black, fontFamily: "Baloo"),
+                              color: Colors.black,),
                         ))
                       ],
                     )),
@@ -340,7 +340,7 @@ Future<void> _signup(BuildContext context) async {
             return SimpleDialog(
               contentPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
               title:
-                  Text("SignUp error!", style: TextStyle(fontFamily: "Baloo")),
+                  Text("SignUp error!"),
               children: <Widget>[
                 Text("Failed to Sign you up with these email & password"),
               ],

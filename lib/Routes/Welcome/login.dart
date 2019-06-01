@@ -60,7 +60,7 @@ void showLoginSheet(BuildContext context) {
                             child: Text(
                           "Facebook Login",
                           style: TextStyle(
-                              color: Colors.blueAccent, fontFamily: "Baloo"),
+                              color: Colors.blueAccent,),
                         ))
                       ],
                     )),
@@ -89,7 +89,7 @@ void showLoginSheet(BuildContext context) {
                             child: Text(
                           "Google Login",
                           style: TextStyle(
-                              color: Colors.deepOrange, fontFamily: "Baloo"),
+                              color: Colors.deepOrange),
                         ))
                       ],
                     )),
@@ -123,7 +123,7 @@ void showLoginSheet(BuildContext context) {
                                         if (input.isEmpty)
                                           return 'Provide an email';
                                       },
-                                      cursorColor: Colors.indigoAccent,
+                                      cursorColor: Color(0xFF8f7fa0),
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         fillColor:
@@ -174,7 +174,7 @@ void showLoginSheet(BuildContext context) {
                                         if (input.length < 6)
                                           return 'Provide 6 characters';
                                       },
-                                      cursorColor: Colors.indigoAccent,
+                                      cursorColor: Color(0xFF8f7fa0),
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         fillColor:
@@ -219,7 +219,7 @@ void showLoginSheet(BuildContext context) {
                             ),
                             RaisedButton(
                               textColor: Colors.white,
-                              color: Colors.indigoAccent,
+                              color: Color(0xFF8f7fa0),
                               child: Text("Get Started",
                                   style: TextStyle(fontFamily: "Baloo")),
                               onPressed: () {
@@ -253,7 +253,7 @@ void showLoginSheet(BuildContext context) {
                             child: Text(
                           "Email & Password",
                           style: TextStyle(
-                              color: Colors.black, fontFamily: "Baloo"),
+                              color: Colors.black),
                         ))
                       ],
                     )),
@@ -288,7 +288,7 @@ Future<void> _login(BuildContext context) async {
             return SimpleDialog(
               contentPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
               title:
-                  Text("Login error!", style: TextStyle(fontFamily: "Baloo")),
+                  Text("Login error!"),
               children: <Widget>[
                 Text("Failed to log you in with these email & password"),
               ],
@@ -310,7 +310,7 @@ Future<void> _googleSignin(BuildContext context) async {
             return SimpleDialog(
               contentPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
               title:
-                  Text("Login error!", style: TextStyle(fontFamily: "Baloo")),
+                  Text("Login error!",),
               children: <Widget>[
                 Text("Failed to log you in :("),
               ],

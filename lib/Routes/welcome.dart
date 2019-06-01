@@ -11,12 +11,12 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigoAccent,
+      color: Color(0xFF8f7fa0),
       child: Scaffold(
         body: Container(
           margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height / 8, left: 40, right: 40),
-          color: Colors.indigoAccent,
+          color: Color(0xFF8f7fa0),
           padding: MediaQuery.of(context).padding,
           child: Column(
             //work with design later
@@ -49,7 +49,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         margin: EdgeInsets.only(bottom: 8),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                            color: Colors.indigoAccent,
+                            color:Color(0xFF8f7fa0),
                             border: Border.all(color: Colors.white)),
                         child: Material(
                           child: InkWell(
@@ -69,7 +69,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         margin: EdgeInsets.only(bottom: 8),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                            color: Colors.indigoAccent,
+                            color: Color(0xFF8f7fa0),
                             border: Border.all(color: Colors.white)),
                         child: Material(
                           child: InkWell(
