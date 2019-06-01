@@ -319,7 +319,7 @@ void showSignupSheet(BuildContext context) {
 Future<void> _signup(BuildContext context) async {
   if (formKey.currentState.validate()) {
     formKey.currentState.save();
-    firebaseUser = await firebaseAuth
+    await firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password)
         .then((onValue) async {
       firestore.runTransaction((trans) async{
