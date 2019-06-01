@@ -12,3 +12,4 @@ FirebaseStorage storage=FirebaseStorage.instance;
 StorageReference storageReference=FirebaseStorage.instance.ref();
 GoogleSignIn googleSignIn;
 DocumentReference user;
+final firestore =Firestore.instance;

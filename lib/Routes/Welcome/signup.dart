@@ -322,12 +322,30 @@ Future<void> _signup(BuildContext context) async {
     firebaseUser = await firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password)
         .then((onValue) async {
-      await Firestore.instance.collection("user").document(onValue.uid).setData(
-          {"name": name, "email": email, "password": password, "img": ""});
+      firestore.runTransaction((trans){
+        trans.set(firestore.collection("user").document(onValue.uid), {
+        "username": name,
+        "useremail": email,
+        "userpassword": password,
+        "userimg": "",
+        "userbio": "Edit bio!",
+        "isconnected": false,
+        });
+      });
       Navigator.pop(context);
     }).catchError((onError) {
-      //TODO: show dialog
-      print(onError);
+      showDialog(
+          context: context,
+          builder: (context) {
+            return SimpleDialog(
+              contentPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+              title:
+                  Text("SignUp error!", style: TextStyle(fontFamily: "Baloo")),
+              children: <Widget>[
+                Text("Failed to Sign you up with these email & password"),
+              ],
+            );
+          });
     });
   }
 }
