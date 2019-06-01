@@ -2,11 +2,14 @@ import 'package:apollo/Utils/firebasehelper.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
 
 import 'Routes/homePage.dart';
 import 'Routes/welcome.dart';
 
 void main(List<String> args) {
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.white));
   runApp(MaterialApp(
     title: "Apollo",
     theme: ThemeData(
