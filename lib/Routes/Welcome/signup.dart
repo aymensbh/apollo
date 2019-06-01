@@ -322,14 +322,14 @@ Future<void> _signup(BuildContext context) async {
     firebaseUser = await firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password)
         .then((onValue) async {
-      firestore.runTransaction((trans){
-        trans.set(firestore.collection("user").document(onValue.uid), {
+      firestore.runTransaction((trans) async{
+        await trans.set(firestore.collection("user").document(onValue.uid), {
         "username": name,
         "useremail": email,
         "userpassword": password,
         "userimg": "",
         "userbio": "Edit bio!",
-        "isconnected": false,
+        "isconnected": true,
         });
       });
       Navigator.pop(context);
